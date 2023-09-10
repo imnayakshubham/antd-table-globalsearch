@@ -1,24 +1,69 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { CustomTable } from './CustomTable/CustomTable';
 
 function App() {
+  const dataSource = [
+    {
+      key: '1',
+      name: 'Mike',
+      age: 32,
+      address: "id",
+    },
+    {
+      key: '2',
+      name: 'John',
+      age: 42,
+      address: '10 Downing Street',
+    },
+    {
+      key: '3',
+      name: 'Mike3',
+      age: 32,
+      address: "id",
+    },
+    {
+      key: '4',
+      name: 'John4',
+      age: 42,
+      address: ' John4 10 Downing Street',
+    },
+  ];
+
+  const columns = [
+    {
+      title: 'Name',
+      dataIndex: 'name',
+      key: 'name',
+    },
+    {
+      title: 'Age',
+      dataIndex: 'age',
+      key: 'age',
+    },
+    {
+      title: 'Address',
+      dataIndex: 'address',
+      key: 'address',
+      render: (text: string) => {
+        return <p><div>{text}</div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas perspiciatis, facilis repellat possimus voluptas autem laudantium doloremque illo, veritatis quod obcaecati non eligendi numquam dolore delectus consectetur odio vero libero!</p>
+      }
+    },
+  ];
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <CustomTable
+        dataSource={dataSource}
+        columns={columns}
+        allowResizing={true}
+        pagination={false}
+        bordered={true}
+        globalSearch={{
+          allowGlobalSearch: true,
+        }}
+        hideColumns={true}
+        size={'small'} />
     </div>
   );
 }
