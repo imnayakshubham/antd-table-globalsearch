@@ -11,7 +11,8 @@
       "esnext"
     ],
     "rootDirs": [
-      "./src"
+      "pages/**/*",
+      "src/**/*",
     ],
     "allowJs": true,
     "skipLibCheck": true,
