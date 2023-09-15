@@ -1,10 +1,17 @@
 {
   "compilerOptions": {
     "target": "es5",
+    "module": "commonjs",
+    "outDir": "build",
     "lib": [
+      "es5",
+      "es6",
       "dom",
       "dom.iterable",
       "esnext"
+    ],
+    "rootDirs": [
+      "./src"
     ],
     "allowJs": true,
     "skipLibCheck": true,
@@ -13,14 +20,22 @@
     "strict": true,
     "forceConsistentCasingInFileNames": true,
     "noFallthroughCasesInSwitch": true,
-    "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "declaration": false
   },
   "include": [
     "src"
+  ],
+  "typeRoots": [
+    "./node_modules/@types",
+  ],
+  "exclude": [
+    "**/*.stories.ts",
+    "**/*.test.ts",
+    "node_modules"
   ]
 }

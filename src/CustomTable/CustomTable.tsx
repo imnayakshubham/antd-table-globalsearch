@@ -19,7 +19,7 @@ export const CustomTable = <RecordType extends AnyObject = AnyObject>(
         globalSearch: {
             allowGlobalSearch = false,
         },
-        hideColumns = false, columns: initialColumns = [], ...restProps } = props;
+        columns: initialColumns = [], ...restProps } = props;
     const [columns, setColumns] = useState(initialColumns);
 
     // const [columnNames, setColumnNames] = useState(() => columns.reduce((acc, curr: any) => {

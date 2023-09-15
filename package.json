@@ -1,7 +1,8 @@
 {
-  "name": "my-app",
+  "name": "antd-table-with-search",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "description": "library with Global Search functionality.",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
