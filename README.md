@@ -24,7 +24,7 @@ const columns = /* your column configuration */;
 const App = () => {
   return (
     <div>
-      <HelloWorld dataSource={dataSource} columns={columns} allowGlobalSearch={true} />
+      <CustomTable dataSource={dataSource} columns={columns} allowGlobalSearch={true} />
     </div>
   );
 };
